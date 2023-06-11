@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/0ec53d8e70.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body id="body">
+    <header class="navigation">
+      <div class="logo">
+        <h2><a href="">Techmoves</a></h2>
+      </div>
+      <nav class="navlinks">
+        <ul>
+          <li class="navItem" onclick="closeMenu()">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="navItem" onclick="closeMenu()">
+            <a href="#about">About</a>
+          </li>
+          <li class="navItem" onclick="closeMenu()">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="navItem icn">
+            <a href="#email"><i class="fa-solid fa-envelope"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="toggle">
+        <div class="menu"></div>
+      </div>
+    </header>
+    <section id="intro">
+      <div class="intro-text">
+        <h1>Hey There. <br />I'm Phelelani</h1>
+        <h2>I'm a Software Developer</h2>
+        <p>
+          I can help you build a product , feature or website Look through some
+          of my work and experience! If you like what you see and have a project
+          you need coded, don’t hestiate to contact me.
+        </p>
+      </div>
+      <div class="socials">
+        <ul>
+          <li>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-m"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="title">
+        <h2>My Recent Works</h2>
+        <hr />
+      </div>
+    </section>
+    <div class="popup"></div>
+    <section id="about">
+      <div class="about">
+        <h2>About me</h2>
+        <p>
+          Hello I’m a software developer! I can help you build a product ,
+          feature or website Look through some of my work and experience! If you
+          like what you see and have a project you need coded, don’t hestiate to
+          contact me.
+        </p>
+        <button>Get My Resume</button>
+      </div>
+      <hr />
+      <div class="skillset">
+        <div class="specifics">
+          <h3><span>&#9830;</span>Language</h3>
+          <ul>
+            <li>Javascript</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+        <div class="specifics">
+          <h3><span>&#9744;</span>Frameworks</h3>
+          <ul>
+            <li>Bootstrap</li>
+            <li>Ruby on Rails</li>
+            <li>RSpec</li>
+            <li>CapyBara</li>
+            <li>Salenium</li>
+          </ul>
+        </div>
+        <div class="specifics">
+          <h3><span>&#9679;</span>Skills</h3>
+          <ul>
+            <li>Codekit</li>
+            <li>Github</li>
+            <li>Codepen</li>
+            <li>Gitlab</li>
+            <li>Terminal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="contact-text">
+        <p>
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </p>
+      </div>
+      <form action="https://formspree.io/f/xpznwejk" class="form" method="POST">
+        <fieldset>
+          <div class="names">
+            <div class="input-grp firstN">
+              <label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First name"
+                  onkeyup="validateFirstName()"
+                  required
+                />
+              </label>
+              <span class="err firstNerror"></span>
+              <span class="firstNValid"></span>
+            </div>
+            <div class="input-grp lastN">
+              <label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last name"
+                  onkeyup="validateLastName()"
+                  required
+                />
+              </label>
+              <span class="err lastNerror"></span>
+              <span class="lastNValid"></span>
+            </div>
+          </div>
+          <div class="input-grp mail">
+            <label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email address"
+                onkeyup=" validateEmail()"
+                required
+              />
+            </label>
+            <span class="err emailError"></span>
+            <span class="emailValid"></span>
+          </div>
+          <div class="input-grp msg">
+            <label>
+              <textarea
+                name="msg"
+                id="msg"
+                cols="30"
+                rows="10"
+                minlength="30"
+                placeholder="Enter text here"
+                onkeyup=" validateMsg()"
+                required
+              ></textarea>
+            </label>
+            <span class="err msgError"></span>
+            <span class="msgValid"></span>
+          </div>
+          <button class="submitBtn" type="submit" onclick="return formValidate()" onclick="storeValues()" clear>
+            Get in touch
+          </button>
+          <span class="err submitError"></span>
+          <span class="formValid"></span>
+        </fieldset>
+      </form>
+
+      <form
+        action="https://formspree.io/f/xpznwejk"
+        class="form2"
+        method="post"
+      >
+        <fieldset>
+          <div class="input-grp fullN">
+            <label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Full name"
+                onkeyup="validateFullName()"
+                required
+              />
+            </label>
+            <span class="err fullNerror"></span>
+            <span class="fullNValid"></span>
+          </div>
+
+          <div class="input-grp mail">
+            <label>
+              <input
+                type="email"
+                id="email2"
+                name="email2"
+                placeholder="name@gmail.com"
+                onkeyup="validateEmail2()"
+                required
+              />
+            </label>
+            <span class="err emailError2"></span>
+            <span class="emailValid2"></span>
+          </div>
+          <div class="input-grp msg">
+            <label>
+              <textarea
+                name="msg2"
+                id="msg2"
+                cols="30"
+                rows="10"
+                minlength="30"
+                placeholder="Enter text here"
+                onkeyup=" validateMsg2()"
+                required
+              ></textarea>
+            </label>
+            <span class="err msgError2"></span>
+            <span class="msgValid2"></span>
+          </div>
+          <button type="submit" onclick="return formValidate2()">
+            Get in touch
+          </button>
+          <span class="err submitError2"></span>
+          <span class="formValid"></span>
+        </fieldset>
+      </form>
+    </footer>
+    <footer id="copyright">
+      <ul>
+        <li>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-m"></i></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
