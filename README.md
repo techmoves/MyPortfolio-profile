@@ -73,9 +73,7 @@
 > LIVE DEMO LINK.
 
 deployment
-- https://techmoves.github.io/setup-mobile-first/
-
--  https://techmoves.github.io/setup-mobile-first/
+- https://techmoves.github.io/MyPortfolio-profile/
 
 
 
